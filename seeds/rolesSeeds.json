@@ -1,0 +1,138 @@
+[
+    {
+        "title": "Cheif Legal Officer",
+        "salary": "350000",
+        "department_id": "3"
+    },
+    {
+        "title":"Legal Lead",
+        "salary": "245000",
+        "department_id": "3"
+    },
+    {
+        "title": "Lawyer",
+        "salary" : "185000",
+        "department_id" : "3"
+    },
+    {
+        "title":"Cheif Marketing Officer",
+        "salary": "250000",
+        "department_id": "5"
+    },
+    {
+        "title":"Marketing Lead",
+        "salary": "125000",
+        "department_id": "5"
+    },
+    {
+        "title":"Marketing Asset",
+        "salary": "85000",
+        "department_id": "5"
+    }, {
+        "title":"Cheif Finance Offcier",
+        "salary": "250000",
+        "department_id": "4"
+    },
+    {
+        "title":"Finance Lead",
+        "salary": "130000",
+        "department_id": "4"
+    }, {
+        "title":"Finance Asset",
+        "salary": "85000",
+        "department_id": "4"
+    },
+    {
+        "title":"Cheif Development Officer",
+        "salary": "285000",
+        "department_id": "1"
+    }, {
+        "title":"Development Lead",
+        "salary": "195000",
+        "department_id": "1"
+    }, {
+        "title":"Front-End Developer",
+        "salary": "90000",
+        "department_id": "1"
+    },
+    {
+        "title":"Back-End Developer",
+        "salary": "95000",
+        "department_id": "1"
+    },
+    {
+        "title":"IT Cheif",
+        "salary": "200000",
+        "department_id": "8"
+    },
+    {
+        "title":"IT Lead",
+        "salary": "155000",
+        "department_id": "8"
+    },
+    {
+        "title":"Data IT Tech",
+        "salary": "95000",
+        "department_id": "8"
+    },
+    {
+        "title":"Server IT Tech",
+        "salary": "85000",
+        "department_id": "8"
+    },
+    {
+        "title":"Local IT Tech",
+        "salary": "80000",
+        "department_id": "8"
+    },
+    {
+        "title":"Cheif Engineering Officer",
+        "salary": "285000",
+        "department_id": "6"
+    },
+    {
+        "title":"Engineering Lead",
+        "salary": "200000",
+        "department_id": "6"
+    },
+    {
+        "title":"Sofware Engineer",
+        "salary": "165000",
+        "department_id": "6"
+    },
+    {
+        "title":"Hardware Engineer",
+        "salary": "170000",
+        "department_id": "6"
+    },
+    {
+        "title":"Cheif Sales Offcier",
+        "salary": "250000",
+        "department_id": "7"
+    }, 
+    {
+        "title":"Sales Lead",
+        "salary": "150000",
+        "department_id": "7"
+    }, 
+    {
+        "title":"Sales Asset",
+        "salary": "82000",
+        "department_id": "7"
+    },
+    {
+        "title":"Cheif Production Officer",
+        "salary": "250000",
+        "department_id": "2"
+    },
+    {
+        "title":"Production Lead",
+        "salary": "155000",
+        "department_id": "2"
+    },
+    {
+        "title":"Production Asset",
+        "salary": "100000",
+        "department_id": "2"
+    }
+]
