@@ -1,0 +1,171 @@
+[
+    {
+        "first_name": "Steph ",
+        "last_name": "Curry ",
+        "role_id": "1",
+        "manager_id": null
+    },
+    {
+        "first_name": "Terry ",
+        "last_name": "Pines ",
+        "role_id": "2 ",
+        "manager_id": "1"
+    },
+    {
+        "first_name": "Barry ",
+        "last_name": "Allen ",
+        "role_id": "3 ",
+        "manager_id": "2"
+    },
+    {
+        "first_name": "Micheal ",
+        "last_name": "Jordan ",
+        "role_id": "4 ",
+        "manager_id": null
+    },
+    {
+        "first_name": "Hillary ",
+        "last_name": "Clinton ",
+        "role_id": "5",
+        "manager_id": "4"
+    },
+    {
+        "first_name": "Bill ",
+        "last_name": "Clinton ",
+        "role_id": "6 ",
+        "manager_id": "5"
+    },
+    {
+        "first_name": "Barry",
+        "last_name": "Obama ",
+        "role_id": "7",
+        "manager_id": null
+    },
+    {
+        "first_name": "Joe",
+        "last_name": "Biden ",
+        "role_id": "8",
+        "manager_id": "7"
+    },
+    {
+        "first_name": "Burnny ",
+        "last_name": "Sanders ",
+        "role_id": "9",
+        "manager_id": "8" 
+    },
+    {
+        "first_name": "Elon ",
+        "last_name": "Musk ",
+        "role_id": "10",
+        "manager_id": null
+    },
+    {
+        "first_name": "Jeff ",
+        "last_name": "Bezos ",
+        "role_id": "11",
+        "manager_id": "10"
+    },
+    {
+        "first_name": "Mark ",
+        "last_name": "Zucker ",
+        "role_id": "12",
+        "manager_id": "11"
+    },
+    {
+        "first_name": "Barden ",
+        "last_name": "Carmickle ",
+        "role_id": "13",
+        "manager_id": "11"
+    },
+    {
+        "first_name": "Linus ",
+        "last_name": "Tech ",
+        "role_id": "14",
+        "manager_id": null
+    },
+    {
+        "first_name": "June ",
+        "last_name": "Clair ",
+        "role_id": "15",
+        "manager_id": "14"
+    },
+    {
+        "first_name": "Peter ",
+        "last_name": "Parker ",
+        "role_id": "16",
+        "manager_id": "14"
+    },
+    {
+        "first_name": "Tony ",
+        "last_name": "Stark ",
+        "role_id": "17",
+        "manager_id": "14"
+    },
+    {
+        "first_name": "Thor",
+        "last_name": "Odinson ",
+        "role_id": "18",
+        "manager_id": "14"
+    },
+    {
+        "first_name": "Happy ",
+        "last_name": "Gilmore ",
+        "role_id": "19",
+        "manager_id": null
+    },
+    {
+        "first_name": "Huby ",
+        "last_name": "Puby ",
+        "role_id": "20",
+        "manager_id": "19"
+    },
+    {
+        "first_name": "Tiger ",
+        "last_name": "Woods ",
+        "role_id": "21",
+        "manager_id": "19"
+    },
+    {
+        "first_name": "Shoter ",
+        "last_name": "McGavin ",
+        "role_id": "22",
+        "manager_id": "19"
+    },
+    {
+        "first_name": "Kelly ",
+        "last_name": "BlueBook ",
+        "role_id": "23",
+        "manager_id": null
+    },
+    {
+        "first_name": "Chris ",
+        "last_name": "Chillen ",
+        "role_id": "24",
+        "manager_id":"23"
+    },
+    {
+        "first_name": "Tony",
+        "last_name": "Hawk",
+        "role_id": "25",
+        "manager_id":"23"
+    },
+    {
+        "first_name": "Mike",
+        "last_name": "Hawk",
+        "role_id": "26",
+        "manager_id": null
+    },
+    {
+        "first_name": "Paul",
+        "last_name": "Dunfey ",
+        "role_id": "27",
+        "manager_id": "26"
+    },
+    {
+        "first_name": "Luke ",
+        "last_name": "Dunfey ",
+        "role_id": "28 ",
+        "manager_id": "26"
+    }
+
+]
