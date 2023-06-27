@@ -209,3 +209,55 @@ const addEmmployee = async () => {
         });
     });
 };
+
+const updateEmployeeRole = async () => {
+    let employees = await Employee.findAll({
+        attributes: [
+            ["id" , "value"],
+            ["first_name" , "name"],
+            ["last_name" , "lastName"],
+        ],
+    });
+    employees = employees.map((employee) => {
+        employee.get({ plain:true });
+        const employeeInfo = employee.get();
+        return{
+            name: `${employeeInfo.name} ${employeeInfo.lastName}`,
+            value: employeeInfo.value,
+        };
+    });
+
+    let roles = await Role.findAll({
+        attributes:[
+            ["id" , "value"],
+            ["title" , "name"],
+        ],
+    });
+
+    roles = roles.map((role) => role.get({ plain:true}));
+
+    inquirer.prompt([
+        {
+            type: "list",
+            message: "What employee's role is getting updated?",
+            name: "id",
+            choices: employees,
+        },
+        {
+            type: "list",
+            message: "What is the name of the updated role they will be getting?",
+            name: "role_id",
+            choices: roles,
+        },
+    ])
+
+    .then((answer) => {
+        Employee.update(answer , {
+            where: {
+                id: answer.id,
+            },
+        }).then((data) => {
+            options();
+        });
+    });
+};
