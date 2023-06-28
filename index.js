@@ -5,8 +5,8 @@ const sequelize = require("./connection");
 const inquirer = require("inquirer");
 const { async } = require("rxjs");
 
-sequelize.sync({force:false}).then(() => {
-    options();
+sequelize.sync({force:true}).then(() => {
+    console.log("created tables");
 });
 
 function options() {

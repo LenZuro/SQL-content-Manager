@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "inquirer": "^8.2.4",
+    "mysql2": "^3.4.2",
+    "sequelize": "^6.31.0",
+    "dotenv": "^16.0.3",
+    "chalk": "^5.2.0"
+  }
+}
