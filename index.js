@@ -6,10 +6,11 @@ const inquirer = require("inquirer");
 const { async } = require("rxjs");
 
 sequelize.sync({force:true}).then(() => {
-    console.log("created tables");
+    console.log("created tables")
 });
 
 function options() {
+    console.log("its working");
     inquirer
     .prompt([
         {
@@ -45,7 +46,7 @@ function options() {
         }
     });
 }
-
+options();
 
 const viewAllDepartments = () => {
     var departments = Department.findAll({raw:true}).then((data) => {
@@ -55,7 +56,7 @@ const viewAllDepartments = () => {
 };
 
 const viewAllRoles = () => {
-    var roles = Role.findall({
+    var roles = Role.findAll({
         raw:true,
         include: [{model:Department}],
     }).then((data) => {
