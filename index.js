@@ -5,9 +5,12 @@ const sequelize = require("./connection");
 const inquirer = require("inquirer");
 const { async } = require("rxjs");
 
-sequelize.sync({force:true}).then(() => {
-    console.log("created tables")
-});
+Department.sync({ force: true }).then(() =>
+  Role.sync().then(() =>
+    Employee.sync().then(() => {
+      console.log("created tables");
+    })
+  ),
 
 function options() {
     console.log("its working");
@@ -27,7 +30,9 @@ function options() {
             ],
             name: "companyManager"
         },
+        
     ])
+    
     .then((answers) => {
         if (answers.companyManager === "View All Departments") {
             viewAllDepartments();
@@ -44,8 +49,10 @@ function options() {
         } else {
             updateEmployeeRole();
         }
+        
     });
-}
+    
+});
 options();
 
 const viewAllDepartments = () => {
