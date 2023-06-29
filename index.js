@@ -4,15 +4,20 @@ const sequelize = require("./connection");
 
 const inquirer = require("inquirer");
 const { async } = require("rxjs");
-
-Department.sync({ force: true }).then(() =>
-  Role.sync().then(() =>
-    Employee.sync().then(() => {
-      console.log("created tables");
+    sequelize.sync({force:false}).then(() =>{
+        console.log("sucsess");
+        init();
     })
-  ),
+// Department.sync({ force: true }).then(() =>
+//   Role.sync().then(() =>
+//     Employee.sync().then(() => {
+//       console.log("created tables");
+//      init();
+//     })
+//   )
+// );
 
-function options() {
+function init() {
     console.log("its working");
     inquirer
     .prompt([
@@ -52,18 +57,17 @@ function options() {
         
     });
     
-});
-options();
-
+};
 const viewAllDepartments = () => {
-    var departments = Department.findAll({raw:true}).then((data) => {
+    Department.findAll({raw:true}).then((data) => {
+        console.log("this is getitng cloer to working" , data);
         console.table(data);
-        options();
+        init();
     });
 };
 
 const viewAllRoles = () => {
-    var roles = Role.findAll({
+      Role.findAll({
         raw:true,
         include: [{model:Department}],
     }).then((data) => {
@@ -71,18 +75,19 @@ const viewAllRoles = () => {
             data.map((role) => {
                 return {
                     id: role.id,
-                    title: role.salary,
+                    salary: role.salary,
+                    title: role.title,
                     department: role["Department.name"],
                 };
             })
         );
-        options();
+        init();
     });
 };
 
 
 const viewAllEmployees = () => {
-    var employees = Employee.findAll({
+     Employee.findAll({
         raw:true,
         include: [{ model:Role , include:[{ model:Department}] }],
     }).then((data) => {
@@ -106,7 +111,7 @@ const viewAllEmployees = () => {
                 };
             })
         );
-        options();
+        init();
     });
 };
 
@@ -120,21 +125,28 @@ const addDepartment = () => {
     ])
     .then((answer) => {
         Department.create({ name: answer.addDepartment}).then((data) => {
-            options();
+            init();
         });
     });
 };
 
 const addRole = async () => {
-    let departments = await Department.findAll({
+    const departments = await Department.findAll({
         attributes: [
             ["id", "value"],
             ["name", "name"],
         ],
     });
-    departments = departments.map((department) =>
-        department.get({ plain:true })
+    const departmentChoices = departments.map((department) => {
+        return {
+            name: department.name,
+            value: department.id
+        }
+    }
+        //department.get({ plain:true })
     );
+
+    //[{name: Legal, value: 1}, {name: Finance, value: 2}]
     inquirer.prompt([
         {
             type: "input",
@@ -149,13 +161,13 @@ const addRole = async () => {
         {
             type: "list",
             message: "What department is this role in?",
-            name: "departments_id",
-            choices: departments,
+            name: "department_id",
+            choices: departmentChoices,
         },
     ])
     .then((answer) => {
         Role.create(answer).then((data) => {
-            options();
+            init();
         });
     });
 };
@@ -213,7 +225,7 @@ const addEmmployee = async () => {
 
     .then((answer) => {
         Employee.create(answer).then((data) => {
-            options();
+            init();
         });
     });
 };
@@ -265,7 +277,7 @@ const updateEmployeeRole = async () => {
                 id: answer.id,
             },
         }).then((data) => {
-            options();
+            init();
         });
     });
 };

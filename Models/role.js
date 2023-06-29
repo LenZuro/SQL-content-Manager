@@ -29,7 +29,7 @@ Role.init(
         timestamps: false,
         freezeTableNames: true,
         underscored: true,
-        modleName: "Role",
+        modelName: "Role",
     }
 );
 
